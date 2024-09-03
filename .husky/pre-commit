@@ -8,23 +8,23 @@ MAGENTA="\033[35m"
 CYAN="\033[36m"
 
 # Custom message before starting the process
-echo -e "${MAGENTA}🚀 Starting the pre-commit process... Good luck!${RESET}"
+printf "${MAGENTA}🚀 Starting the pre-commit process... Good luck!${RESET}\n"
 
 # Run `npm check`
-echo -e "${YELLOW}🔍 Running 'npm check'...${RESET}"
+printf "${YELLOW}🔍 Running 'npm check'...${RESET}\n"
 if ! npm run check; then
-  echo -e "${RED}❌ 'npm check' failed! Please fix the issues before committing. 😢${RESET}"
+  printf "${RED}❌ 'npm check' failed! Please fix the issues before committing. 😢${RESET}\n"
   exit 1
 fi
-echo -e "${GREEN}✅ 'npm check' completed successfully!${RESET}"
+printf "${GREEN}✅ 'npm check' completed successfully!${RESET}\n"
 
 # Run `npm lint`
-echo -e "🔍 Running 'npm lint'..."
+printf "🔍 Running 'npm lint'..."
 if ! npm run lint; then
-  echo -e "${RED}❌ 'npm lint' failed! Please fix the issues before committing. 😢${RESET}"
+  printf "${RED}❌ 'npm lint' failed! Please fix the issues before committing. 😢${RESET}\n"
   exit 1
 fi
-echo -e "${GREEN}✅ 'npm lint' completed successfully!${RESET}"
+printf "${GREEN}✅ 'npm lint' completed successfully!${RESET}\n"
 
 # Custom message after the process finishes
-echo -e "${CYAN}🎉 All checks passed! Ready to commit! 🚀"
+printf "${CYAN}🎉 All checks passed! Ready to commit! 🚀\n"

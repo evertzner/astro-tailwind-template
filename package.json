@@ -11,7 +11,7 @@
     "check": "astro check",
     "lint": "prettier --check . && eslint .",
     "astro": "astro",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
